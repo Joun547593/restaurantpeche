@@ -1,0 +1,321 @@
+body{
+	background-color: rgba(138, 70, 70, 0.1);
+}
+header{
+	background-color: #8a3737;
+	width: 102%;
+/*division du header en trois parties : titre, team et commander*/
+	display: grid;
+	grid-template-columns: 1.5fr 1.5fr 1.5fr;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	position: relative;
+	left: -10px;
+	top: -10px;
+	height:202px;
+}
+.titre{
+	text-decoration: none;
+	width:66%;
+}
+.team{
+	width:66%;
+	position: relative;
+	left: 62px;
+	top: 2px;
+	visibility: hidden;
+	opacity:0;
+}
+/*team : photo de l'équipe du restaurant qui apparaît lorsqu'on déplace la souris sur le header*/
+header:hover .team{
+	visibility: visible;
+	opacity:1;
+}
+h1 {
+	margin-bottom: -25px;
+}
+header p{
+	padding-left: 64px;
+	font-family: verdana;
+	font-size: 17px;
+	padding-top: 2px;
+	color: white;
+	text-shadow: #396182 0.1em 0.1em 0.2em;
+}
+/*espace : permet d'espacer les mots Restaurant et Bar dans le header*/
+.espace{
+	word-s
+	pacing: 40px;
+}
+.commander{
+	text-decoration: none;
+	padding-top: 56px;
+	font-family: arial;
+}
+.commander p{
+	position:relative;
+	top:-10px;
+}
+/*btn-order : bouton avec lien vers le site de commande en ligne*/
+#btn-order {
+    background-color: #396182;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 24px;
+    display: block;
+    width: 150px;
+    margin: 24px auto;
+    font-weight: bold;
+    border-radius: 60px;
+    border: 1px solid #7CA5DB;
+    transition: 1s;
+    font-family: verdana;
+}
+/*le bouton change de couleur lorsque la souris est dessus*/
+#btn-order:hover {
+	background-color: white;
+	color: #396182;
+}
+header a{
+	color: white;
+	text-decoration: none;
+	display:block;
+}
+/*modalite : classe créée pour donner un style aux modalités de vente*/
+.modalite{
+	text-decoration: none;
+	font-family: verdana;
+	font-size: 13px;
+	margin-left: -57px;
+	text-align: center;
+	color:white;
+}
+/*contact : classe créée pour l'adresse, numéro de téléphone et lien instagram sous forme de liste*/
+.contact{
+	position: absolute;
+	width:100%;
+	height: 40px;
+	text-align: center;
+}
+ul{
+	list-style-type: none;
+}
+.contact ul li {
+    display: inline-block;
+    width: 32vw;
+    height: 100vh;
+}
+.contact ul {
+    position: relative;
+    left: -32px;
+    font-family: verdana;
+    font-size: 15px;
+    top: -16px;
+}
+.contact ul li a {
+	color:black;
+}
+/*les éléments de la classe contact apparaissent en gras lorsqu'on déplace la souris dessus*/
+.contact ul li a:hover {
+	color:#8a3737;
+	font-weight:bold;
+}
+/*3 classes ci-dessous créées pour les logos de localisation, téléphone et instagram*/
+.logo1{
+	max-width: 32px;
+	position: relative;
+	top: 5px;
+}
+.logo2{
+	max-width: 21px;
+    position: relative;
+    top: 17px;
+}
+.logo3{
+	max-width: 24px;
+	position: relative;
+	top: 5px;
+}
+nav a {
+	text-decoration: none;
+}
+/*la classe plat contient les photos de plats pour allécher le client*/
+.plats{
+    display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 97%;
+	margin: 118px auto;
+    padding-bottom: 100px;
+    padding-right:44px;
+}
+/*lorsque la souris est sur une des 4 photos, un effet de zoom grossit la photo*/
+.zoom {
+	transition: transform .2s;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+}
+
+.zoom:hover {
+	-ms-transform: scale(1.5); /* IE 9 */
+	-webkit-transform: scale(1.5); /* Safari 3-8 */
+	transform: scale(1.5); 
+}
+.img_wrap {
+  	position: relative;
+	height: 304px;
+	width: 240px;
+ }
+#photo {
+    max-width: 240px;
+	height: 304px;
+}
+ .img_descript {
+	position: absolute;
+	top: 292px;
+	bottom: 0;
+	left: 0px;
+	right: 13px;
+	color: #e0e8ee;
+	visibility: hidden;
+	opacity: 0;
+	font-family: fantasy;
+	background: rgb(170, 154, 136);
+	height: 17%;
+	border-radius: 3px;
+	font-size: 13px;
+}
+ .img_descript1 {
+	position: absolute;
+	top: 292px;
+	bottom: 0;
+	left: 0px;
+	right: 13px;
+	color: #e0e8ee;
+	visibility: hidden;
+	opacity: 0;
+	font-family: fantasy;
+	background: rgb(170, 154, 136);
+	height: 21%;
+	border-radius: 3px;
+	font-size: 13px;
+}
+/*lorsque la souris est sur l'une des 4 photos, la description du plat apparaît sous la photo zoomée*/
+ .img_wrap:hover .img_descript {
+	visibility: visible;
+	opacity: 1;
+}
+.img_wrap:hover .img_descript1 {
+	visibility: visible;
+	opacity: 1;
+}
+/*à nouveau un espace avec le bouton de commande permet d'accéder au site de commande en ligne*/
+.menu{
+	position: relative;
+	top: 88px;
+}
+.menu p{
+	text-align: center;
+	font-family: verdana;
+	font-size: 20px;
+}
+/*dans la classe pêche apparaît une photo de la façade du restaurant ainsi que deux paragraphes : l'un décrivant l'offre de restauration et l'autre l'équipe du restaurant*/
+.peche{
+	display: grid;
+	grid-template-columns: 2fr 1.5fr;
+	}
+.peche hr{
+	color:#396182;
+	position: relative;
+	top: -7px;
+}
+/*photo de la façade*/
+.facade{
+	position:relative;
+	top: 96px;
+	width: 100%;
+	border: 1px solid #396182;
+}
+/*paragraphes écrits avec liens menant aux autres pages du site (pour le moment fictives)*/
+.contenu{
+	position:relative;
+	top: 95px;
+}
+.contenu p{
+	font-family:verdana, serif;
+	text-align: justify;
+	width:97%;
+	position: relative;
+	left: 15px;
+	text-indent: 54px;
+	top: -2px;
+	font-size: 15px;
+}
+.contenu a{
+	color: #396182;
+	position: relative;
+	right: -432px;
+	font-family: verdana;
+	font-size: 14px;
+	top: -21px;
+}
+/*les liens "en savoir plus" deviennent obliques lorsque la souris est dessus*/
+.contenu a:hover{
+	font-style:oblique;
+}
+.contenu p span{
+	font-weight:bold;
+	color:#396182;
+}
+.contenu hr{
+	color:#396182;
+	position: relative;
+	top: -7px;
+	width: 101%;
+}
+/*pied de page avec les horaires d'ouverture, le lien Instagram et le lien de l'adresse mail du restaurant*/
+footer {
+    position: relative;
+	top: 100px;
+	left: -9px;
+	font-family: verdana;
+	color:white;
+	height: 150px;
+	background-color: #396182;
+	width: 102%;
+}
+footer a{
+	color:white;
+	position: relative;
+	left: 15px;
+	text-decoration: none;
+}
+footer a:hover{
+	font-weight:bold;
+}
+footer p{
+	width: 97%;
+	position: relative;
+	left: 15px;
+	text-indent: 40px;
+}
+/*logos Instagram et mailing*/
+.logo4{
+    max-width: 33px;
+	position: relative;
+	top: 5px;
+	left: 6px;
+}
+.logo5{
+    max-width: 31px;
+	position: relative;
+	top: 7px;
+	left: 3px;
+}
+.mail{
+    color: white;
+	position: relative;
+	left: 1115px;
+}
